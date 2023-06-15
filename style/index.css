@@ -5,3 +5,117 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  color: rgb(107, 208, 39);
+   font-family: Arial, sans-serif;
+   background-image:url("./star-wars-trivia-yoda.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   
+ }
+
+ /* Logo */
+ .logo{
+   width: 100px;
+   height: 100px;
+   border-radius:100%;
+   border:2px  rgb(10, 31, 1);
+   transform: scale(1.5); 
+   border-style: dotted solid double dashed;
+   position: relative;
+  left: 70px;
+  top: 10px;
+ }
+
+ 
+.container {
+   display: flex;
+   flex-direction: row;
+   /* justify-content: center; */
+   padding: 3rem;
+ }
+ 
+ #characters {
+   display: flex;
+   flex-direction: column;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 40%;
+ }
+ 
+ #characters li {
+   cursor: pointer;
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+ }
+ 
+ 
+ #characters li:hover {
+   background-color: #0b011d;
+   transform: scale(1.2); 
+   
+ }
+ 
+ #character-details {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 60%;
+   align-items: flex-end;
+   /* position: fixed;
+    top: 20px; */
+    /* border: 1px solid red; */
+    position: fixed;
+    left: 420px;
+    top: 140px;
+
+ }
+
+ 
+  #character-image {
+   width: 300px;
+   height: 300px;
+   margin-bottom: 20px;
+   border-radius:100%;
+   border:10px  rgb(77, 217, 21);
+   border-style: dotted solid double dashed;
+   animation-name:starwars;
+   animation-duration:1s;
+    
+  } 
+
+  @keyframes starwars{
+
+   0%{    }
+   25%{border: 5px grey solid;}
+   50%{border: 7px red double;}
+   75%{border: 7px  green dashed;}
+   100%{ border:10px  rgb(77, 217, 21);}
+   100%{border-style: dotted solid double dashed;}
+ }
+ /* Row Edit */
+ .character-details-row{
+   padding-right: 20px;
+ }
+ 
+ /* Responsive with Flex */
+ @media screen and (max-width: 600px) {
+   .container {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   #characters {
+     width: 100%;
+   }
+ 
+   #character-details {
+     width: 100%;
+   }
+   #character-image{
+       margin-top: 20px;
+   }
+ }
+
